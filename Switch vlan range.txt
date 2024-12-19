@@ -1,0 +1,13 @@
+Switch(config)#interface range fastEthernet 0/1 - 10
+
+Switch(config-if-range)#switchport mode access 
+
+Switch(config-if-range)#switchport access vlan 10
+Switch(config-if-range)#exit
+
+Switch(config)#interface range fastEthernet 0/11 - 20
+
+Switch(config-if-range)#switchport mode access 
+
+Switch(config-if-range)#switchport access vlan 20
+Switch(config-if-range)#exit
