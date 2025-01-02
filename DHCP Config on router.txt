@@ -1,0 +1,13 @@
+Router>en
+Router#Config t
+Router(Config)#ip dhcp pool vlan1
+Router(dhcp-config)#network 192.168.1.0 255.255.255.0
+Router(dhcp-config)#default-router 192.168.1.1
+Router(dhcp-config)#dns-server 8.8.8.8
+Router(config)#ip dhcp excluded-address 192.168.1.1
+Router(config)#interface fa0/0
+Router(config-if)#no sh
+Router(config-if)#interface fa0/0.1
+Router(config-subif)#
+Router(config-subif)#encapsulation dot1Q 1
+Router(config-subif)#ip address 192.168.1.1 255.255.255.0
